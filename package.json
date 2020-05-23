@@ -1,0 +1,16 @@
+{
+  "name": "gestiondeeventos",
+  "version": "1.0.0",
+  "description": "Sistema de Gestion de Eventos de Formacion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pepi Linita Kawaii",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "morgan": "^1.10.0"
+  }
+}
