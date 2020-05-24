@@ -29,6 +29,7 @@ app.engine("hbs", expresshbs({
 app.set("view engine", "hbs");
 
 // archivos de rutas
+app.use(require(path.join(__dirname, "routes/index.js")));
 app.use(require(path.join(__dirname, "routes/admin.js")));
 
 const port = process.env.port || 9000;

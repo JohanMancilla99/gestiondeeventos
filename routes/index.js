@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/admin", (req, res) => {
-    res.render("admin/inicio");
+router.get("/", (req, res) => {
+    res.render("index");
 });
 
 module.exports = router;
