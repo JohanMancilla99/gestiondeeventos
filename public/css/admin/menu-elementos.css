@@ -1,3 +1,7 @@
+.menu-opciones {
+    width: 100%;
+    position: absolute;
+}
 .elementos-menu {
     width: 100%;
     position: relative;
@@ -70,4 +74,34 @@
 }
 .e-opciones-show {
     display: block;
+}
+.esconder-partial {
+    display: none;
+}
+
+/* trampas */
+
+.button-deco {
+    background: rgb(154, 205, 50);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+.button-deco:hover {
+    background:rgb(159, 223, 32);
+}
+.input-deco {
+    outline: none;
+    color: #7a7a7a;
+}
+.select-deco {
+    outline: none;
+    color: #7a7a7a;
+}
+.textarea-deco {
+    outline: none;
+    color: #7a7a7a;
 }

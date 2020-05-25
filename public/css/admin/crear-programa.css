@@ -1,0 +1,59 @@
+.cp-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cp h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.cp-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "cp-1 cp-1"
+        "cp-2 cp-2"
+        "cp-3 cp-4"
+        "cp-5 cp-5"
+        "cp-6 cp-6"
+    ;
+}
+.cp-1 {
+    grid-area: cp-1;
+}
+.cp-2 {
+    grid-area: cp-2;
+}
+.cp-3 {
+    grid-area: cp-3;
+}
+.cp-4 {
+    grid-area: cp-4;
+}
+.cp-5 {
+    grid-area: cp-5;
+}
+.cp-6 {
+    grid-area: cp-6;
+}
+.cp-div {
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px;
+}
+.cp-div input, .cp-div select, .cp-5 textarea {
+    padding: 10px;
+    width: 100%;
+}
+.cp-5 textarea {
+    resize: none;
+    height: 120px;
+}
+.cp-6 button{
+    width: 100%;
+    padding: 10px 0px;
+}
+

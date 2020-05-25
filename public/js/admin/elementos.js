@@ -2,6 +2,7 @@ const opciones = document.querySelectorAll(".opcion h1");
 const turnOff = document.querySelectorAll(".e-opciones p");
 const hamb = document.querySelector(".hamb");
 const menu = document.querySelector(".opciones-elementos");
+const contenedores = document.querySelectorAll(".partial");
 
 function hideAgain() {
     turnOff.forEach(opcion => {
@@ -19,7 +20,6 @@ function hideColor() {
     })
 }
 
-menu.classList.toggle("hide-menu");
 hamb.addEventListener("click", () => {
     hideAgain();
     hideColor();
@@ -29,7 +29,9 @@ hamb.addEventListener("click", () => {
 turnOff.forEach(opcion => {
     opcion.addEventListener("click", () => {
         opcion.parentElement.classList.toggle("e-opciones-show")
+        menu.classList.toggle("hide-menu");
         hideColor();
+        cambiarPartial(opcion.id)
     })
 })
 
@@ -45,3 +47,22 @@ opciones.forEach(opcion => {
         opcion.classList.toggle("opcion-h1-color");
     });
 });
+
+function cambiarPartial(id) {
+    esconderPartials()
+    contenedores.forEach(partial => {
+        if (partial.classList.contains(id)) {
+            partial.classList.toggle("esconder-partial")
+        }
+    })
+}
+
+function esconderPartials() {
+    contenedores.forEach(partial => {
+        if (!partial.classList.contains("esconder-partial"))
+            partial.classList.toggle("esconder-partial")
+    })
+}
+esconderPartials()
+
+menu.classList.toggle("hide-menu");

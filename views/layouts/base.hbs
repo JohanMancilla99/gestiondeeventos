@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGEF</title>
     <link rel="stylesheet" href="/css/base-style.css">
-    <link rel="stylesheet" href={{style}}>
+    {{#each cssFiles }}
+    <link rel="stylesheet" href="{{this}}">
+    {{/each}}
 </head>
 
 <body>
 
     {{{ body }}}
 
-    <script src={{script}}></script>
+    {{#each jsFiles }}
+    <script src="{{this}}"></script>
+    {{/each}}
 
 </body>
 
