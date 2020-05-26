@@ -48,7 +48,7 @@ app.set("view engine", "hbs");
 app.use(require(path.join(__dirname, "routes/index.js")));
 app.use(require(path.join(__dirname, "routes/admin.js")));
 
-const port = process.env.PORT || 9000;
-app.listen(port || 9000, () => {
+const port = process.env.PORT || 4000;
+app.listen(port || 4000, () => {
     console.log(`server running in port ${port}`);
 });
