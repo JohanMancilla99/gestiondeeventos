@@ -23,6 +23,7 @@ function hideColor() {
 hamb.addEventListener("click", () => {
     hideAgain();
     hideColor();
+    esconderPartials();
     menu.classList.toggle("hide-menu");
 });
 

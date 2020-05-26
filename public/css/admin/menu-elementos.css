@@ -30,6 +30,7 @@
     width: 100%;
     background: rgb(235, 235, 235);
     padding: 60px 0px 20px 0px;
+    z-index: 2;
 }
 .opcion {
     width: 100%;

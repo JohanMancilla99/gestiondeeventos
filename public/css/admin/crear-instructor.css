@@ -1,0 +1,71 @@
+.ci-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ci-container h1 {
+    padding: 20px;
+    font: 1.3rem;
+}
+.ci-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "ci-1 ci-1"
+        "ci-2 ci-3"
+        "ci-4 ci-4"
+        "ci-5 ci-5"
+    ; 
+}
+.ci-1 {
+    grid-area: ci-1;
+}
+.ci-2 {
+    grid-area: ci-2;
+}
+.ci-3 {
+    grid-area: ci-3;
+}
+.ci-4 {
+    grid-area: ci-4;
+}
+.ci-5 {
+    grid-area: ci-5;
+}
+.ci-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.ci-div input, .ci-div select, .ci-div button {
+    width: 100%;
+    padding: 10px;
+}
+.ci-4 table {
+    width: 100%;
+}
+.ci-4 tr {
+    display: grid;
+    grid-template-columns: auto 80% auto;
+    border-bottom: 1px solid #b3b3b3;
+}
+.ci-4 td {
+    min-height: 40px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.ci-tr {
+    background: rgb(154, 205, 50);
+}
+.ci-seleccionar {
+    width: 20px;
+    height: 20px;
+    background: rgb(197, 197, 197);
+    border-radius: 50%;
+}
+.ci-seleccionado {
+    background: rgb(154, 205, 50);
+}

@@ -1,0 +1,48 @@
+.ca-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ca-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.ca-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "ca-1 ca-1"
+        "ca-2 ca-3"
+        "ca-4 ca-5"
+        "ca-6 ca-6"
+    ;
+}
+.ca-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.ca-1 {
+    grid-area: ca-1;
+}
+.ca-2 {
+    grid-area: ca-2;
+}
+.ca-3 {
+    grid-area: ca-3;
+}
+.ca-4 {
+    grid-area: ca-4;
+}
+.ca-5 {
+    grid-area: ca-5;
+}
+.ca-6 {
+    grid-area: ca-6;
+}
+.ca-div input, .ca-div select, .ca-6 button {
+    width: 100%;
+    padding: 10px;
+}

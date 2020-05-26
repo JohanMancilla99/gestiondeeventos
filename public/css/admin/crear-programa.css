@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
 }
-.cp h1 {
+.cp-container h1 {
     padding: 20px;
     font-size: 1.3rem;
 }
@@ -40,8 +40,6 @@
     grid-area: cp-6;
 }
 .cp-div {
-    display: flex;
-    justify-content: center;
     padding: 0px 10px;
 }
 .cp-div input, .cp-div select, .cp-5 textarea {
