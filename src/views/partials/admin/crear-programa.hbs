@@ -1,28 +1,28 @@
 <section class="cp partial">
     <section class="cp-container">
         <h1>Crear Programa</h1>
-        <form class="cp-form">
+        <form action="/add" method="POST" class="cp-form">
             <div class="cp-div cp-1">
-                <input class="input-deco" type="text" placeholder="id_programa" required>
+                <input class="input-deco" type="text" name="id_programa" placeholder="id_programa" required>
             </div>
             <div class="cp-div cp-2">
-                <input class="input-deco" type="text" placeholder="Nombre Programa" required>
+                <input class="input-deco" type="text" name="nombre_programa" placeholder="Nombre Programa" required>
             </div>
             <div class="cp-div cp-3">
-                <select class="select-deco" required>
+                <select class="select-deco" name="tipo_programa" required>
                     <option disabled selected>Tipo Programa</option>
                     <option value="Tecnico">Tecnico</option>
                     <option value="Tecnologo">Tecnologo</option>
                 </select>
             </div>
             <div class="cp-div cp-4">
-                <input class="input-deco" type="number" placeholder="duracion" min="1" max="10">
+                <input class="input-deco" type="number" name="duracion_programa" placeholder="duracion" min="1" max="10">
             </div>
             <div class="cp-div cp-5">
-                <textarea class="textarea-deco" cols="30" rows="10" placeholder="Descripcion"></textarea>
+                <textarea class="textarea-deco" name="descripcion_programa" cols="30" rows="10" placeholder="Descripcion"></textarea>
             </div>
             <div class="cp-div cp-6">
-                <button class="button-deco">Guardar</button>
+                <button type="submit" class="button-deco">Guardar</button>
             </div>
         </form>
     </section>

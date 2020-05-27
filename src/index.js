@@ -9,22 +9,12 @@ const app = express();
 const expresshbs = require("express-handlebars");
 
 //importar rutas
+const routes = require('./routes/crearprograma');
 
-
-//rutas
 
 
 // establecer ruta de la carpeta views
 app.set("views", path.join(__dirname, "views"));
-
-//middlewares
-app.use(morgan('dev')); // muestra mensajes por consola
-app.use(myConnection(mysql, {
-    host: 'localhost',
-    user: 'root',
-    password: '1234',
-    database: 'dbnode'
-}, 'single'));
 
 
 app.use(express.urlencoded({extended: false})); 
@@ -41,12 +31,26 @@ app.engine("hbs", expresshbs({
     helpers: require(path.join(__dirname, "library/hbshelpers.js"))
 }))
 
+
 // ejecutar hbs como engine
 app.set("view engine", "hbs");
 
 // archivos de rutas
 app.use(require(path.join(__dirname, "routes/index.js")));
 app.use(require(path.join(__dirname, "routes/admin.js")));
+
+//middlewares
+app.use(morgan('dev')); // muestra mensajes por consola
+app.use(myConnection(mysql, {
+    host: 'localhost',
+    user: 'root',
+    password: '1234',
+    database: 'sgef'
+}, 'single'));
+
+
+//rutas
+app.use('/', routes)
 
 const port = process.env.PORT || 9000;
 app.listen(port || 9000, () => {
