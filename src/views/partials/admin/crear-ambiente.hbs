@@ -1,19 +1,19 @@
 <section class="ca partial">
     <section class="ca-container">
         <h1>Crear Ambiente</h1>
-        <form class="ca-form">
+        <form action="/ambiente" method="POST" class="ca-form">
             <div class="ca-div ca-1">
-                <input type="text" class="input-deco" required placeholder="nombre ambiente">
+                <input name="nombre_ambiente" type="text" class="input-deco" required placeholder="nombre ambiente">
             </div>
             <div class="ca-div ca-2">
-                <select class="select-deco" required>
+                <select name="torre" class="select-deco" required>
                     <option disabled selected>Torre</option>
                     <option value="oriental">Oriental</option>
                     <option value="occidental">Occidental</option>
                 </select>
             </div>
             <div class="ca-div ca-3">
-                <select class="select-deco" required>
+                <select name="piso" class="select-deco" required>
                     <option disabled selected>Piso</option>
                     <option value="1">1</option>
                     <option value="1">2</option>
@@ -24,17 +24,17 @@
                 </select>
             </div>
             <div class="ca-div ca-4">
-                <input type="number" class="input-deco" required placeholder="capacidad">
+                <input name="capacidad" type="number" class="input-deco" required placeholder="capacidad">
             </div>
             <div class="ca-div ca-5">
-                <select class="select-deco" required>
+                <select name="tipo_ambiente"  class="select-deco" required>
                     <option disabled selected>Tipo Ambiente</option>
                     <option value="oriental">Oriental</option>
                     <option value="occidental">Occidental</option>
                 </select>
             </div>
             <div class="ca-div ca-6">
-                <button class="button-deco">Guardar</button>
+                <button type="submit" class="button-deco">Guardar</button>
             </div>
         </form>
     </section>

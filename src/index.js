@@ -9,7 +9,10 @@ const app = express();
 const expresshbs = require("express-handlebars");
 
 //importar rutas
-const routes = require('./routes/crearprograma');
+
+
+
+
 
 
 
@@ -49,8 +52,12 @@ app.use(myConnection(mysql, {
 }, 'single'));
 
 
-//rutas
-app.use('/', routes)
+//Configuraci
+
+app.use(require('./routes/programa'));
+app.use(require('./routes/ambiente'));
+
+
 
 const port = process.env.PORT || 9000;
 app.listen(port || 9000, () => {

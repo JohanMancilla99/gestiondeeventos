@@ -48,13 +48,13 @@ create table resultados (
 );
 
 create table ambientes (
-	id_ambiente int primary key,
+	id_ambiente int primary key auto_increment,
 	nombre_ambiente varchar(100) not null,
     torre varchar(20) not null,
     piso int not null,
     capacidad int not null,
-    tipo_ambiente JSON not null,
-    programacion_ambiente varchar(200) not null
+    tipo_ambiente varchar(20) not null,
+    programacion_ambiente varchar(200)
 );
 
 create table instructores (

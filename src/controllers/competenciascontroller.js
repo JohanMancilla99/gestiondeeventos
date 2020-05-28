@@ -2,12 +2,12 @@ const controller = {};
 
 controller.list = (req, res) => {
     req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM programas', (err, programas) =>{
+        conn.query('SELECT * FROM competencias', (err, competencias) =>{
             if(err){
                 res.json(err);
             }
-            res.render('programas', {
-                data: programas
+            res.render('competencias', {
+                data: competencias
             });
         });
     });
@@ -18,7 +18,7 @@ controller.save =(req, res) =>{
     const data = req.body;
 
    req.getConnection((err, conn) =>{
-       conn.query('INSERT INTO programas set ?', [data], (err, programas)=>{
+       conn.query('INSERT INTO competencias set ?', [data], (err, competencias)=>{
            res.redirect('/');  // redirecciona a la pagina cuando el dato es guardado
        });
    });
@@ -29,9 +29,9 @@ controller.save =(req, res) =>{
 controller.edit = (req, res) =>{
     const {id} = req.params;
     req.getConnection((err, conn)=>{
-    conn.query('SELECT * FROM programas WHERE id = ?', [id], (err, customer)=>{
+    conn.query('SELECT * FROM competencias WHERE id = ?', [id], (err, competencias)=>{
         res.render('edit', {
-            data: programas[0]
+            data: competencias[0]
         })
     })
     });
@@ -40,9 +40,9 @@ controller.edit = (req, res) =>{
 // Guarda dato modificado
 controller.update = (req, res) =>{
     const {id} = req.params;
-    const newProgramas = req.body;
+    const newCompetencia = req.body;
     req.getConnection((err, conn) =>{
-        conn.query('UPDATE programas set ? WHERE id = ?', [newProgramas, id], (err, rows) =>{
+        conn.query('UPDATE competencias set ? WHERE id = ?', [newCompetencia, id], (err, rows) =>{
             res.redirect('/');
         })
     })
@@ -53,16 +53,11 @@ controller.delete =(req, res) =>{
     const {id} = req.params;
 
     req.getConnection((err, conn) => {
-        conn.query('DELETE FROM customer WHERE id = ?', [id], (err, rows) =>{
+        conn.query('DELETE FROM competencias WHERE id = ?', [id], (err, rows) =>{
         res.redirect('/');  // redirecciona a la pagina cuando el dato es guardado   
         });
     });
 };
-
-
-
-
-
 
 
 module.exports = controller;

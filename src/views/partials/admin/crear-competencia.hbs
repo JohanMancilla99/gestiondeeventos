@@ -1,12 +1,12 @@
 <section class="cc partial">
     <section class="cc-container">
         <h1>Crear Competencia</h1>
-        <form class="cc-form">
+        <form action="/add" method="POST" class="cc-form">
             <div class="cc-div cc-1">
-                <input type="text" required class="input-deco" placeholder="id_competencia">
+                <input type="text" name="id_competencia" required class="input-deco" placeholder="id_competencia">
             </div>
             <div class="cc-div cc-2">
-                <textarea class="textarea-deco" cols="30" rows="10" placeholder="nombre competencia"></textarea>
+                <textarea class="textarea-deco" name="nombre_competencia" cols="30" rows="10" placeholder="nombre competencia"></textarea>
             </div>
 
             <div class="cc-div cc-3">
@@ -45,7 +45,7 @@
                 </table>
             </div>
             <div class="cc-div cc-5">
-                <button class="button-deco">Guardar</button>
+                <button type="submit" class="button-deco">Guardar</button>
             </div>
         </form>
     </section>
