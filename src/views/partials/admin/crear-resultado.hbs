@@ -1,15 +1,15 @@
 <section class="cr partial">
     <section class="cr-container">
         <h1>Crear Resultado de Aprendizaje</h1>
-        <form class="cr-form">
+        <form action="/resultado" method="POST" class="cr-form">
             <div class="cr-div cr-1">
-                <input type="text" class="input-deco" required placeholder="id_resultado">
+                <input type="text" name="id_resultado" class="input-deco" required placeholder="id_resultado">
             </div>
             <div class="cr-div cr-2">
-                <textarea class="textarea-deco" cols="30" rows="10" placeholder="nombre resultado"></textarea>
+                <textarea class="textarea-deco" name="nombre_resultado" cols="30" rows="10" placeholder="nombre resultado"></textarea>
             </div>
             <div class="cr-div cr-3">
-                <input type="number" class="input-deco" required placeholder="horas del resultado">
+                <input type="number" name="horas_resultado" class="input-deco" required placeholder="horas del resultado">
             </div>
             <div class="cr-div cr-4">
                 <div class="cr-4-trimestres">

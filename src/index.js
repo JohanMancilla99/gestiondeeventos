@@ -56,10 +56,14 @@ app.use(myConnection(mysql, {
 
 app.use(require('./routes/programa'));
 app.use(require('./routes/ambiente'));
-
+app.use(require('./routes/fichas'));
+app.use(require('./routes/competencias'));
+app.use(require('./routes/resultados'));
+app.use(require('./routes/instructor'));
 
 
 const port = process.env.PORT || 9000;
 app.listen(port || 9000, () => {
     console.log(`server running in port ${port}`);
 });
+

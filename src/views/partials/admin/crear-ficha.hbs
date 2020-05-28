@@ -1,19 +1,21 @@
 <section class="cf partial">
     <section class="cf-container">
         <h1>Crear Ficha</h1>
-        <form action="/add" method="POST" class="cf-form">
+        <form action="/fichas" method="POST" class="cf-form">
             <div class="cf-div cf-1">
                 <input type="text" name="codigo_ficha" class="input-deco" required placeholder="N° Ficha">
             </div>
             <div class="cf-div cf-2">
                 <select class="select-deco" required>
                     <option disabled selected>Programa</option>
+                    <option value="técnico">Técnico</option>
+                    <option value="tecnólogo">Tecnólogo</option>
                 </select>
             </div>
             <div class="cf-div cf-3">
                 <div class="cf-3-fecha">
                     <label>Fecha Creacion</label>
-                    <input type="date" name="inicio_formacion" class="input-deco">
+                    <input type="date"  class="input-deco">
                 </div>
                 <div class="cf-activador"></div>
                 <p>Usar trimestre personalizado</p>
@@ -27,3 +29,17 @@
         </form>
     </section>
 </section>
+
+
+
+{{!--  <select class="select-deco" name="nombre_programa" required>
+                <option disabled selected>Programa</option>
+                    <option value="Desarrollo y Adaptación de Prótesis y Órtesis">Desarrollo y Adaptación de Prótesis y Órtesis</option>
+                    <option value="Aseguramiento Metrológico Industrial">Aseguramiento Metrológico Industrial</option>
+                    <option value="Diseño de Productos Industriales">Diseño de Productos Industriales</option>
+                    <option value="Diseño de Sistemas Mecánicos">Diseño de Sistemas Mecánicos</option>
+                    <option value="Diseño de Moldes para la Transformación de Productos Plásticos">Diseño de Moldes para la Transformación de Productos Plásticos</option>
+                    <option value="Diseño de Troqueles">Diseño de Troqueles</option>
+                    <option value="Diseño de Integración de Automatismos Mecatrónicos">Diseño de Integración de Automatismos Mecatrónicos</option>
+                    <option value="Análisis y Desarrollo de Sistemas de Información">Análisis y Desarrollo de Sistemas de Información</option>
+                </select> --}}

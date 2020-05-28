@@ -54,7 +54,7 @@ controller.delete =(req, res) =>{
 
     req.getConnection((err, conn) => {
         conn.query('DELETE FROM competencias WHERE id = ?', [id], (err, rows) =>{
-        res.redirect('/');  // redirecciona a la pagina cuando el dato es guardado   
+        res.redirect('/admin/elementos');  // redirecciona a la pagina cuando el dato es guardado   
         });
     });
 };

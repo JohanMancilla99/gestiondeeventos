@@ -1,7 +1,7 @@
 <section class="cc partial">
     <section class="cc-container">
         <h1>Crear Competencia</h1>
-        <form action="/add" method="POST" class="cc-form">
+        <form action="/competencias" method="POST" class="cc-form">
             <div class="cc-div cc-1">
                 <input type="text" name="id_competencia" required class="input-deco" placeholder="id_competencia">
             </div>
@@ -10,8 +10,10 @@
             </div>
 
             <div class="cc-div cc-3">
-                <select class="select-deco" required>
-                    <option disabled selected>Tipo de Ambiente</option>
+                 <select name="tipo_ambiente"  class="select-deco" required>
+                    <option disabled selected>Tipo Ambiente</option>
+                    <option value="computación">Comptación</option>
+                    <option value="maquinitas">Maquinitas</option>
                 </select>
             </div>
             <div class="cc-div cc-4">

@@ -7,10 +7,10 @@ router.get('/', programaController.list);
 
 router.post('/programa', programaController.save);
 
-router.get('/delete/:id', programaController.delete); // el /:id se le conoce como parametro de la ruta
+router.get('/programaD/:id', programaController.delete); // el /:id se le conoce como parametro de la ruta
 
-router.get('/update/:id', programaController.edit);
-router.post('/update/:id', programaController.update);
+router.get('/programaE/:id', programaController.edit);
+router.post('/programaU/:id', programaController.update);
 
 
 

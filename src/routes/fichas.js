@@ -5,12 +5,12 @@ const fichascontroller = require('../controllers/fichascontroller');
 
 router.get('/', fichascontroller.list); 
 
-router.post('/add', fichascontroller.save);
+router.post('/fichas', fichascontroller.save);
 
-router.get('/delete/:id', fichascontroller.delete); // el /:id se le conoce como parametro de la ruta
+router.get('/fichasD/:id', fichascontroller.delete); // el /:id se le conoce como parametro de la ruta
 
-router.get('/update/:id', fichascontroller.edit);
-router.post('/update/:id', fichascontroller.update);
+router.get('/fichasE/:id', fichascontroller.edit);
+router.post('/fichasU/:id', fichascontroller.update);
 
 
 

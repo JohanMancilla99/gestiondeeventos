@@ -1,14 +1,13 @@
 const controller = {};
 
 controller.list = (req, res) => {
-    
     req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM ambientes', (err, ambientes) =>{
+        conn.query('SELECT * FROM resultados', (err, resultados) =>{
             if(err){
                 res.json(err);
             }
-            res.render('ambientes', {
-                data: ambientes
+            res.render('resultados', {
+                data: resultados
             });
         });
     });
@@ -19,7 +18,7 @@ controller.save =(req, res) =>{
     const data = req.body;
 
    req.getConnection((err, conn) =>{
-       conn.query('INSERT INTO ambientes set ?', [data], (err, ambientes)=>{
+       conn.query('INSERT INTO resultados set ?', [data], (err, resultados)=>{
            res.redirect('/admin/elementos');  // redirecciona a la pagina cuando el dato es guardado
        });
    });
@@ -30,9 +29,9 @@ controller.save =(req, res) =>{
 controller.edit = (req, res) =>{
     const {id} = req.params;
     req.getConnection((err, conn)=>{
-    conn.query('SELECT * FROM ambientes WHERE id = ?', [id], (err, ambientes)=>{
+    conn.query('SELECT * FROM resultados WHERE id = ?', [id], (err, resultados)=>{
         res.render('edit', {
-            data: ambientes[0]
+            data: resultados[0]
         })
     })
     });
@@ -41,9 +40,9 @@ controller.edit = (req, res) =>{
 // Guarda dato modificado
 controller.update = (req, res) =>{
     const {id} = req.params;
-    const necAmbientes = req.body;
+    const newResultado = req.body;
     req.getConnection((err, conn) =>{
-        conn.query('UPDATE ambientes set ? WHERE id = ?', [necAmbientes, id], (err, rows) =>{
+        conn.query('UPDATE resultados set ? WHERE id = ?', [newResultado, id], (err, rows) =>{
             res.redirect('/');
         })
     })
@@ -54,11 +53,12 @@ controller.delete =(req, res) =>{
     const {id} = req.params;
 
     req.getConnection((err, conn) => {
-        conn.query('DELETE FROM ambientes WHERE id = ?', [id], (err, rows) =>{
+        conn.query('DELETE FROM resultados WHERE id = ?', [id], (err, rows) =>{
         res.redirect('/');  // redirecciona a la pagina cuando el dato es guardado   
         });
     });
 };
+
 
 
 module.exports = controller;
