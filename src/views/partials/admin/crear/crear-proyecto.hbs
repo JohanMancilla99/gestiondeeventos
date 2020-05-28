@@ -1,12 +1,12 @@
 <section class="cpy partial">
     <section class="cpy-container">
         <h1>Crear Proyecto</h1>
-        <form class="cpy-form">
+        <form action="/proyecto" method="POST" class="cpy-form">
             <div class="cpy-div cpy-1">
-                <input type="text" class="input-deco" placeholder="codigo proyecto">
+                <input type="text" name="codigo_proyecto" class="input-deco" placeholder="codigo proyecto">
             </div>
             <div class="cpy-div cpy-2">
-                <textarea class="textarea-deco" cols="30" rows="10" placeholder="nombre proyecto"></textarea>
+                <textarea class="textarea-deco" name="nombre_proyecto" cols="30" rows="10" placeholder="nombre proyecto"></textarea>
             </div>
             <div class="cpy-div cpy-3">
                 <table>
@@ -33,7 +33,7 @@
                 </table>
             </div>
             <div class="cpy-div cpy-4">
-                <button class="button-deco">Guardar</button>
+                <button type="submit" class="button-deco">Guardar</button>
             </div>
         </form>
     </section>

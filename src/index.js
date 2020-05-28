@@ -53,7 +53,7 @@ app.use(require('./routes/fichas'));
 app.use(require('./routes/competencias'));
 app.use(require('./routes/resultados'));
 app.use(require('./routes/instructor'));
-
+app.use(require('./routes/proyectos'));
 
 const port = process.env.PORT || 9000;
 app.listen(port || 9000, () => {
