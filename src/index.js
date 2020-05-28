@@ -8,13 +8,6 @@ const app = express();
 // hadlebars
 const expresshbs = require("express-handlebars");
 
-//importar rutas
-
-
-
-
-
-
 
 // establecer ruta de la carpeta views
 app.set("views", path.join(__dirname, "views"));
@@ -52,7 +45,7 @@ app.use(myConnection(mysql, {
 }, 'single'));
 
 
-//Configuraci
+//Configuracion rutas
 
 app.use(require('./routes/programa'));
 app.use(require('./routes/ambiente'));
