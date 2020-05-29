@@ -3,14 +3,16 @@
         <h1>Crear Competencia</h1>
         <form action="/competencias" method="POST" class="cc-form">
             <div class="cc-div cc-1">
-                <input type="text" name="id_competencia" required class="input-deco" placeholder="id_competencia">
+                <input type="text" name="id_competencia" required class="input-deco" placeholder="id_competencia"
+                    autocomplete="off">
             </div>
             <div class="cc-div cc-2">
-                <textarea class="textarea-deco" name="nombre_competencia" cols="30" rows="10" placeholder="nombre competencia"></textarea>
+                <textarea class="textarea-deco" name="nombre_competencia" cols="30" rows="10"
+                    placeholder="nombre competencia"></textarea>
             </div>
 
             <div class="cc-div cc-3">
-                 <select name="tipo_ambiente"  class="select-deco" required>
+                <select name="tipo_ambiente" class="select-deco" required>
                     <option disabled selected>Tipo Ambiente</option>
                     <option value="computación">Comptación</option>
                     <option value="maquinitas">Maquinitas</option>

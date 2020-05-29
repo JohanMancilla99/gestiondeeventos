@@ -3,7 +3,8 @@
         <h1>Crear Programa</h1>
         <form action="/programa" method="POST" class="cp-form">
             <div class="cp-div cp-1">
-                <input class="input-deco" type="text" name="id_programa" placeholder="id_programa" required>
+                <input class="input-deco" type="text" name="id_programa" placeholder="id_programa" required
+                    autocomplete="off">
             </div>
             <div class="cp-div cp-2">
                 <select class="select-deco" name="tipo_programa" required>
@@ -13,13 +14,15 @@
                 </select>
             </div>
             <div class="cp-div cp-3">
-                <input class="input-deco" type="text" name="nombre_programa" placeholder="Nombre programa" required>
+                <input class="input-deco" type="text" name="nombre_programa" placeholder="Nombre programa" required
+                    autocomplete="off">
             </div>
             <div class="cp-div cp-4">
-                <input class="input-deco" type="number" name="duracion_programa" placeholder="duracion" min="1" max="10">
+                <input class="input-deco" type="number" name="duracion_programa" placeholder="duracion" min="3" max="6">
             </div>
             <div class="cp-div cp-5">
-                <textarea class="textarea-deco" name="descripcion_programa" cols="30" rows="10" placeholder="Descripcion"></textarea>
+                <textarea class="textarea-deco" name="descripcion_programa" cols="30" rows="10"
+                    placeholder="Descripcion" autocomplete="off"></textarea>
             </div>
             <div class="cp-div cp-6">
                 <button type="submit" class="button-deco">Guardar</button>

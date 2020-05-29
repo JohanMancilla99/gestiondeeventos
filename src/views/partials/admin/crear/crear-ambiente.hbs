@@ -3,7 +3,8 @@
         <h1>Crear Ambiente</h1>
         <form action="/ambiente" method="POST" class="ca-form">
             <div class="ca-div ca-1">
-                <input name="nombre_ambiente" type="text" class="input-deco" required placeholder="nombre ambiente">
+                <input name="nombre_ambiente" type="text" class="input-deco" required placeholder="nombre ambiente"
+                    autocomplete="off">
             </div>
             <div class="ca-div ca-2">
                 <select name="torre" class="select-deco" required>
@@ -24,10 +25,11 @@
                 </select>
             </div>
             <div class="ca-div ca-4">
-                <input name="capacidad" type="number" class="input-deco" required placeholder="capacidad">
+                <input name="capacidad" type="number" class="input-deco" required placeholder="capacidad"
+                    autocomplete="off">
             </div>
             <div class="ca-div ca-5">
-                <select name="tipo_ambiente"  class="select-deco" required>
+                <select name="tipo_ambiente" class="select-deco" required>
                     <option disabled selected>Tipo Ambiente</option>
                     <option value="oriental">Comptación</option>
                     <option value="occidental">Maquinitas</option>

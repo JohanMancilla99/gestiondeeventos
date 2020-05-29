@@ -13,7 +13,7 @@ const expresshbs = require("express-handlebars");
 app.set("views", path.join(__dirname, "views"));
 
 
-app.use(express.urlencoded({extended: false})); 
+app.use(express.urlencoded({ extended: false }));
 
 // configuracion de la carpeta global 
 app.use(express.static(path.join(__dirname, "public")));
@@ -40,7 +40,7 @@ app.use(morgan('dev')); // muestra mensajes por consola
 app.use(myConnection(mysql, {
     host: 'localhost',
     user: 'root',
-    password: '1234',
+    password: '',
     database: 'sgef'
 }, 'single'));
 
@@ -59,4 +59,3 @@ const port = process.env.PORT || 9000;
 app.listen(port || 9000, () => {
     console.log(`server running in port ${port}`);
 });
-

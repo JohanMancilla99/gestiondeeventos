@@ -3,13 +3,16 @@
         <h1>Crear Resultado de Aprendizaje</h1>
         <form action="/resultado" method="POST" class="cr-form">
             <div class="cr-div cr-1">
-                <input type="text" name="id_resultado" class="input-deco" required placeholder="id_resultado">
+                <input type="text" name="id_resultado" class="input-deco" required placeholder="id_resultado"
+                    autocomplete="off">
             </div>
             <div class="cr-div cr-2">
-                <textarea class="textarea-deco" name="nombre_resultado" cols="30" rows="10" placeholder="nombre resultado"></textarea>
+                <textarea class="textarea-deco" name="nombre_resultado" cols="30" rows="10"
+                    placeholder="nombre resultado"></textarea>
             </div>
             <div class="cr-div cr-3">
-                <input type="number" name="horas_resultado" class="input-deco" required placeholder="horas del resultado">
+                <input type="number" name="horas_resultado" class="input-deco" required
+                    placeholder="horas del resultado" autocomplete="off">
             </div>
             <div class="cr-div cr-4">
                 <div class="cr-4-trimestres">
@@ -24,6 +27,7 @@
                     </div>
                 </div>
             </div>
+            <!-- el programa se usa es para filtrar las competencias, no va a la db -->
             <div class="cr-div cr-5">
                 <select class="select-deco" required>
                     <option disabled selected>Programa</option>
@@ -32,6 +36,8 @@
             <div class="cr-div cr-6">
                 <select class="select-deco" required>
                     <option disabled selected>Competencia</option>
+                    <!-- en value se debe poner el id -->
+                    <option value="1">competencia 1</option>
                 </select>
             </div>
             <div class="cr-div cr-7">

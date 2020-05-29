@@ -3,7 +3,8 @@
         <h1>Crear Ficha</h1>
         <form action="/fichas" method="POST" class="cf-form">
             <div class="cf-div cf-1">
-                <input type="text" name="codigo_ficha" class="input-deco" required placeholder="N° Ficha">
+                <input type="text" name="codigo_ficha" class="input-deco" required placeholder="N° Ficha"
+                    autocomplete="off">
             </div>
             <div class="cf-div cf-2">
                 <select class="select-deco" required>
@@ -15,13 +16,14 @@
             <div class="cf-div cf-3">
                 <div class="cf-3-fecha">
                     <label>Fecha Creacion</label>
-                    <input type="date"  class="input-deco">
+                    <input type="date" class="input-deco" name="inicio_formacion" autocomplete="off">
                 </div>
                 <div class="cf-activador"></div>
                 <p>Usar trimestre personalizado</p>
             </div>
             <div class="cf-div cf-4">
-                <input type="number" name="cantidad_aprendices" class="input-deco" required placeholder="cantidad aprendices">
+                <input type="number" name="cantidad_aprendices" class="input-deco" required
+                    placeholder="cantidad aprendices" autocomplete="off">
             </div>
             <div class="cf-div cf-5">
                 <button type="submit" class="button-deco">Guardar</button>

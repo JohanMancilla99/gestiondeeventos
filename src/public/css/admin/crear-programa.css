@@ -15,8 +15,8 @@
     grid-gap: 10px;
     grid-template-areas: 
         "cp-1 cp-1"
-        "cp-2 cp-2"
-        "cp-3 cp-4"
+        "cp-3 cp-3"
+        "cp-2 cp-4"
         "cp-5 cp-5"
         "cp-6 cp-6"
     ;
