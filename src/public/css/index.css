@@ -1,0 +1,71 @@
+
+.entrada {
+    min-height: 80vh;
+    background: rgb(216, 218, 219)
+}
+.como-usar {
+    min-height: 70vh;
+    background: #095759;
+    display: grid;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+}
+.como-usar div {
+    color: white;
+    text-align: center;
+}
+.como-usar h1 {
+    margin: 16px 0px;
+    font-size: 34px;
+    font-family: 'Abhaya Libre', serif;
+}
+.como-usar p { 
+    font-family: 'Abhaya Libre', serif;
+}
+.como-usar a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: #087d80;
+    border-radius: 20px;
+    font-family: 'Abhaya Libre', serif;
+}
+.noticias {
+    width: 100%;
+    min-height: 60vh;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.noticias h1 {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 30px;
+}
+.paginas-interes {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 50vh;
+}
+.pagina {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagina div {
+    width: 250px;
+    height: 250px;
+    background-color: #e9e9e9;
+    border-radius: 50%;
+}
+.pagina p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #095759;
+}
