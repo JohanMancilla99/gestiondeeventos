@@ -3,7 +3,12 @@ const router = express.Router();
 
 
 router.get("/admin", (req, res) => {
-    res.render("admin/inicio");
+    res.render("admin/inicio", {
+        cssFiles: [
+            "/css/admin/header.css",
+            "/css/admin/inicio.css"],
+        jsFiles: ["/js/admin/header.js"]
+    });
 });
 
 router.get("/admin/elementos", (req, res) => {
@@ -28,7 +33,8 @@ router.get("/admin/elementos", (req, res) => {
             "/js/admin/crear-resultado.js",
             "/js/admin/crear-instructor.js",
             "/js/admin/crear-proyectos.js",
-            "/js/admin/crear-act-proyecto.js"
+            "/js/admin/crear-act-proyecto.js",
+            "/js/admin/header.js"
         ]
     });
 });

@@ -1,7 +1,7 @@
 
 .h-admin {
     width: 100%;
-    height: 50px;
+    min-height: 8vh;
     background: rgb(154, 205, 50);
     display: flex;
     justify-content: center;
@@ -22,5 +22,48 @@
 }
 .links a:hover {
     color: rgb(229, 243, 202);
+}
+.header-burger {
+    display: none;
+}
+
+@media screen and (max-width: 766px) {
+    body {
+        overflow-x: hidden;
+    }
+    .links {
+        position: absolute;
+        top: 8vh;
+        left: 0px;
+        height: 92vh;
+        z-index: 2;
+        flex-direction: column;
+        width: 60%;
+        background-color: rgb(154, 205, 50);
+        transform: translateX(-100%);
+        padding: 30px 0px;
+        transition: all 0.4s ease;
+    }
+    .links a {
+        font-size: 18px;
+    }
+    .header-burger {
+        display: block;
+        cursor: pointer;
+    }
+    .header-burger div {
+        width: 26px;
+        height: 4px;
+        margin-bottom: 4px;
+        background: white;
+    }
+    .h-admin {
+        justify-content: flex-start;
+        padding: 0px 20px;
+    }
+}
+
+.show-links {
+    transform: translateX(0%);
 }
 

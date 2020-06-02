@@ -87,3 +87,15 @@
 .desactivar {
     background: #a0a0a0;
 }
+
+@media screen and (min-width: 766px) {
+    .cf-form {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .cf-form {
+        width: 50%;
+    }
+}

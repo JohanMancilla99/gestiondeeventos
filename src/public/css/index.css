@@ -1,4 +1,6 @@
-
+body {
+    overflow-x: hidden;
+}
 .entrada {
     min-height: 80vh;
     background: rgb(216, 218, 219)
@@ -68,4 +70,21 @@
     transform: translate(-50%, -50%);
     font-size: 18px;
     color: #095759;
+
+    
+}
+
+@media screen and (max-width: 900px) {
+    .pagina div {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .paginas-interes {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        margin: 20px;
+    }
 }

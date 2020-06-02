@@ -55,3 +55,15 @@
 .cap-seleccionado {
     background: rgb(154, 205, 50);
 }
+
+@media screen and (min-width: 766px) {
+    .cap-form {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .cap-form {
+        width: 50%;
+    }
+}
