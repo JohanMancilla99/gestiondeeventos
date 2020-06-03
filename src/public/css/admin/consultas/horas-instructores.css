@@ -1,0 +1,49 @@
+ .hrs {
+     display: grid;
+     justify-items: center;
+ }
+ .consulta-hrs {
+     display: grid;
+     width: 100vw;
+     grid-gap: 20px;
+     justify-items: center;
+ }
+ .hrs-inicio {
+     display: grid;
+     justify-items: center;
+     padding: 10px;
+     grid-gap: 10px;
+ }
+ .hrs-inicio p {
+     text-align: center;
+ }
+ .hrs-select {
+     width: 90%;
+     padding: 10px;
+     outline: none;
+ }
+ .hrs-select option {
+     padding: 4px;
+ }
+ .hrs-table {
+    width: 90%;
+ }
+ .hrs-table tr {
+     display: grid;
+     grid-template-columns: 30% 50% auto;
+     min-height: 40px;
+     background-color: rgb(230, 230, 230);
+     font-size: 12px;
+     align-content: center;
+     padding: 5px;
+     border-bottom: 1px solid lightslategray;
+ }
+ .hrs-table tr:nth-child(1) {
+     background-color: rgb(154, 205, 50);
+ }
+
+ @media screen and (min-width: 766px) {
+     .consulta-hrs {
+         width: 60%;
+     }
+ }

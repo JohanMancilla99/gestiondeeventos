@@ -1,0 +1,49 @@
+.coelem {
+    display: grid;
+    justify-items: center;
+}
+.consulta-coelem {
+    display: grid;
+    width: 100vw;
+    grid-gap: 20px;
+    justify-items: center;
+}
+.coelem-inicio {
+    display: grid;
+    justify-items: center;
+    padding: 10px;
+    grid-gap: 10px;
+}
+.coelem-inicio p {
+    text-align: center;
+}
+.coelem-select {
+    width: 90%;
+    padding: 10px;
+    outline: none;
+}
+.coelem-select option {
+    padding: 4px;
+}
+.coelem-table {
+   width: 90%;
+}
+.coelem-table tr {
+    display: grid;
+    grid-template-columns: 30% 50% auto;
+    min-height: 40px;
+    background-color: rgb(230, 230, 230);
+    font-size: 12px;
+    align-content: center;
+    padding: 5px;
+    border-bottom: 1px solid lightslategray;
+}
+.coelem-table tr:nth-child(1) {
+    background-color: rgb(154, 205, 50);
+}
+
+@media screen and (min-width: 766px) {
+    .consulta-coelem {
+        width: 60%;
+    }
+}

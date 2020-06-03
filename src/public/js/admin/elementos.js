@@ -66,4 +66,3 @@ function esconderPartials() {
 }
 esconderPartials()
 
-menu.classList.toggle("hide-menu");
