@@ -1,12 +1,12 @@
 <section class="cap partial">
     <section class="cap-container">
         <h1>Crear Actividad de Proyecto</h1>
-        <form class="cap-form">
+        <form action="/actProyect" method="POST" class="cap-form">
             <div class="cap-div cap-1">
-                <textarea class="textarea-deco" cols="30" rows="10" placeholder="nombre actividad"></textarea>
+                <textarea name="nombre_actividad" class="textarea-deco" cols="30" rows="10" placeholder="nombre actividad"></textarea>
             </div>
             <div class="cap-div cap-2">
-                <select class="select-deco" required>
+                <select name="fase_actividad" class="select-deco" required>
                     <option disabled selected>Fase</option>
                     <option value="analisis">Analisis</option>
                     <option value="ejecucion">Ejecucion</option>

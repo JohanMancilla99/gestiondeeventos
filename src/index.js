@@ -40,7 +40,7 @@ app.use(morgan('dev')); // muestra mensajes por consola
 app.use(myConnection(mysql, {
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: '1234',
     database: 'sgef'
 }, 'single'));
 
@@ -54,6 +54,8 @@ app.use(require('./routes/competencias'));
 app.use(require('./routes/resultados'));
 app.use(require('./routes/instructor'));
 app.use(require('./routes/proyectos'));
+app.use(require('./routes/actividad_proyecto'));
+app.use(require('./routes/actividad_aprendizaje'));
 
 const port = process.env.PORT || 9000;
 app.listen(port || 9000, () => {
