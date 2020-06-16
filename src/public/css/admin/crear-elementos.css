@@ -1,0 +1,735 @@
+
+.crear-elementos-window {
+    height: 88vh;
+    display: grid;
+    grid-template-columns: 36% auto;
+    background: url(../../img/bg/elementos.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.crear-elementos-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.opciones {
+    width: 80%;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+}
+.opciones option {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0ea9ad;
+    background: white;
+    border: 3px solid #0ea9ad;
+    padding: 1px 0px;
+    position: relative;
+    cursor: pointer;
+    
+    transition: all 0.4s;
+}
+.opciones option:hover {
+    background-color: #cefdff;
+}
+.opciones option::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translate(10px, 10px);
+    background-color: rgba(14, 168, 173, 0.445);
+    z-index: -1;
+}
+.crear-elementos-formularios {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.formularios-container {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.822);
+    border-radius: 12px;
+    overflow-y: scroll;
+}
+.formularios-container::-webkit-scrollbar {
+    width: 8px; 
+    background: none;
+}
+.formularios-container::-webkit-scrollbar-thumb {
+    background: #138b85;
+    border-radius: 0px 5px 5px 0px; 
+
+}
+.opciones-burger {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: none;
+}
+.opciones-burger div {
+    width: 25px;
+    height: 4px;
+    background-color: rgb(48, 138, 130);
+}
+.show-options-d {
+    transform: translateX(0%);
+}
+@media screen and (max-width: 900px) {
+    .crear-elementos-window {
+        overflow-x: hidden;
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    .crear-elementos-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 100%;
+        background-color: red;
+    }
+    .opciones-burger {
+        display: grid;
+        grid-gap: 5px;
+        z-index: 11;
+        cursor: pointer;
+        z-index: 11;
+    }
+}
+
+/* General Styling */
+.hidePartials {
+    display: none;
+    pointer-events: none;
+} 
+.partial {
+    width: 100%;
+    padding: 20px 40px;
+}
+.input-deco {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 4px;
+}
+.select-deco {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 4px;
+}
+.textarea-deco {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgb(87, 87, 87);
+    padding: 10px;
+    border-radius: 4px;
+}
+.button-deco {
+    padding: 15px 20px;
+    background-color: #0ea9ad;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 100%;
+}
+.table-container {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.table-deco {
+    width: 100%;
+}
+.table-deco tr {
+    font-size: 14px;
+    display: grid;
+    border-bottom: 1px solid #b3b3b3;
+}
+.table-deco td {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
+    min-height: 40px;
+}
+
+/*! ------------------------- Crear Programas ------------------------------ */
+
+.cp-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cp-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.cp-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "cp-1 cp-1"
+        "cp-3 cp-3"
+        "cp-2 cp-4"
+        "cp-5 cp-5"
+        "cp-6 cp-6"
+    ;
+}
+.cp-1 {
+    grid-area: cp-1;
+}
+.cp-2 {
+    grid-area: cp-2;
+}
+.cp-3 {
+    grid-area: cp-3;
+}
+.cp-4 {
+    grid-area: cp-4;
+}
+.cp-5 {
+    grid-area: cp-5;
+}
+.cp-6 {
+    grid-area: cp-6;
+}
+.cp-div {
+    padding: 0px 10px;
+}
+
+/* Fichas */
+
+.cf-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cf-container h1 {
+    padding: 20px 0px 15px 0px;
+    font-size: 1.3rem;
+}
+.cf-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas:
+        "cf-1 cf-1"
+        "cf-2 cf-2"
+        "cf-3 cf-4"
+        "cf-5 cf-5"
+    ;
+}
+.cf-div input, .cf-div select {
+    width: 100%;
+    padding: 10px;
+}
+.cf-div {
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+.cf-1 {
+    grid-area: cf-1;
+}
+.cf-2 {
+    grid-area: cf-2;
+}
+.cf-3 {
+    grid-area: cf-3;
+    position: relative;
+    margin: 10px 0px;
+}
+.cf-4 {
+    grid-area: cf-4;
+    margin: 10px 0px;
+}
+.cf-5 {
+    grid-area: cf-5;
+}
+.cf-5 button{
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: 10px;
+}
+.cf-3 label {
+    position: absolute;
+    font-size: 12px;
+    transform: translateY(-100%);
+    color: #7a7a7a;
+}
+.cf-3 p {
+    position: absolute;
+    bottom: 0px;
+    left: 35px;
+    font-size: 12px;
+    transform: translateY(140%);
+    color: #7a7a7a;
+}
+.cf-activador {
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    width: 15px;
+    height: 15px;
+    background: rgb(154, 205, 50);
+    border-radius: 50%;
+    transform: translateY(140%);
+    cursor: pointer;
+}
+.cf-3-fecha {
+    width: 100%;
+}
+.desactivar-fecha {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.desactivar {
+    background: #a0a0a0;
+}
+
+/* Competencia */
+
+.cc-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cc-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.cc-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.cc-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.cc-div input, .cc-div select {
+    width: 100%;
+    padding: 10px;
+}
+.cc-2 textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 10px;
+}
+.cc-4 tr {
+    grid-template-columns: auto 80% auto;
+}
+.cc-main-tr {
+    background: rgb(14, 168, 173);
+    border: none;
+}
+.cc-seleccionar-programa {
+    width: 20px;
+    height: 20px;
+    background: rgb(197, 197, 197);
+    border-radius: 50%;
+}
+.cc-5 button {
+    width: 100%;
+    padding: 10px;
+}
+.programa-seleccionado {
+    background: rgb(154, 205, 50);
+}
+
+/* Ambientes */ 
+
+.ca-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ca-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.ca-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "ca-1 ca-1"
+        "ca-2 ca-3"
+        "ca-4 ca-5"
+        "ca-6 ca-6"
+    ;
+}
+.ca-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.ca-1 {
+    grid-area: ca-1;
+}
+.ca-2 {
+    grid-area: ca-2;
+}
+.ca-3 {
+    grid-area: ca-3;
+}
+.ca-4 {
+    grid-area: ca-4;
+}
+.ca-5 {
+    grid-area: ca-5;
+}
+.ca-6 {
+    grid-area: ca-6;
+}
+.ca-div input, .ca-div select, .ca-6 button {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Resultado */
+
+.cr-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cr-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.cr-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "cr-2 cr-2"
+        "cr-1 cr-3"
+        "cr-4 cr-4"
+        "cr-5 cr-5"
+        "cr-6 cr-6"
+        "cr-7 cr-7"  
+    ;
+}
+.cr-1 {
+    grid-area: cr-1;
+}
+.cr-2 {
+    grid-area: cr-2;
+}
+.cr-3 {
+    grid-area: cr-3;
+}
+.cr-4 {
+    grid-area: cr-4;
+}
+.cr-5 {
+    grid-area: cr-5;
+}
+.cr-6 {
+    grid-area: cr-6;
+}
+.cr-7 {
+    grid-area: cr-7;
+}
+.cr-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.cr-div input, .cr-div select {
+    width: 100%;
+    padding: 10px;
+}
+.cr-div textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 10px;
+}
+.cr-4-trimestres {
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+}
+.cr-4 p {
+    font-size: 0.9rem;
+    color: #7a7a7a;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.cr-trimestres {
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.cr-trimestres div {
+    width: 100%;
+    background-color: #d6d6d6;
+    height: 40px;
+    border-radius: 2px;
+    color: #7a7a7a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cr-7 button {
+    width: 100%;
+    padding: 10px 0px;
+}
+.ts {
+    opacity: 0.4;
+}
+
+/* Instructor */
+
+.ci-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ci-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.ci-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "ci-1 ci-1"
+        "ci-2 ci-3"
+        "ci-4 ci-4"
+        "ci-5 ci-5"
+    ; 
+}
+.ci-1 {
+    grid-area: ci-1;
+}
+.ci-2 {
+    grid-area: ci-2;
+}
+.ci-3 {
+    grid-area: ci-3;
+}
+.ci-4 {
+    grid-area: ci-4;
+}
+.ci-5 {
+    grid-area: ci-5;
+}
+.ci-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.ci-div input, .ci-div select, .ci-div button {
+    width: 100%;
+    padding: 10px;
+}
+.ci-4 tr {
+    grid-template-columns: auto 80% auto;
+}
+.ci-main-tr {
+    background: rgb(14, 168, 173);
+    border: none;
+}
+.ci-seleccionar {
+    width: 20px;
+    height: 20px;
+    background: rgb(197, 197, 197);
+    border-radius: 50%;
+}
+.ci-seleccionado {
+    background-color: rgb(154, 205, 50);
+}
+
+
+/* Proyecto */
+
+.cpy-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cpy-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.cpy-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.cpy-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.cpy-div input, .cpy-div textarea, .cpy-div button {
+    width: 100%;
+    padding: 10px;
+}
+.cpy-div textarea {
+    height: 120px;
+    resize: none;
+}
+.cpy-3 table {
+    width: 100%;
+}
+.cpy-3 tr {
+    display: grid;
+    grid-template-columns: auto 70% auto;
+}
+.cpy-3 tr:nth-child(1) {
+    background: rgb(154, 205, 50);
+}
+.cpy-3 td {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    min-height: 40px;
+}
+.cpy-seleccionar {
+    width: 20px;
+    height: 20px;
+    background: rgb(197, 197, 197);
+    border-radius: 50%;
+}
+.cpy-seleccionado {
+    background: rgb(154, 205, 50);
+}
+
+/* Actividad de aprendizaje */
+
+.caa-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.caa-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.caa-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.caa-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.caa-div input, 
+.caa-div textarea, 
+.caa-div button, 
+.caa-div select {
+    width: 100%;
+    padding: 10px;
+}
+.caa-div textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Actividad de Proyecto */
+
+.cap-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cap-container h1 {
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.cap-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.cap-div {
+    width: 100%;
+    padding: 0px 10px;
+}
+.cap-div input, 
+.cap-div textarea, 
+.cap-div button, 
+.cap-div select {
+    width: 100%;
+    padding: 10px;
+}
+.cap-div textarea {
+    height: 120px;
+    resize: none;
+}
+.cap-3 table {
+    width: 100%;
+}
+.cap-3 tr {
+    display: grid;
+    grid-template-columns: auto 70% auto;
+}
+.cap-3 tr:nth-child(1) {
+    background: rgb(154, 205, 50);
+}
+.cap-3 td {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    min-height: 40px;
+    border-bottom: 1px solid #b3b3b3;
+}
+.cap-seleccionar {
+    width: 20px;
+    height: 20px;
+    background: rgb(197, 197, 197);
+    border-radius: 50%;
+}
+.cap-seleccionado {
+    background: rgb(154, 205, 50);
+}
+
+
+
+
+

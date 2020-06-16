@@ -11,30 +11,15 @@ router.get("/admin", (req, res) => {
     });
 });
 
-router.get("/admin/elementos", (req, res) => {
-    res.render("admin/elementos", {
+router.get("/admin/crear-elementos", (req, res) => {
+    res.render("admin/crear-elementos", {
         cssFiles: [
-            "/css/admin/menu-elementos.css",
             "/css/admin/header.css",
-            "/css/admin/crear-programa.css",
-            "/css/admin/crear-ficha.css",
-            "/css/admin/crear-competencia.css",
-            "/css/admin/crear-resultado.css",
-            "/css/admin/crear-ambiente.css",
-            "/css/admin/crear-instructor.css",
-            "/css/admin/crear-proyecto.css",
-            "/css/admin/crear-act-aprendizaje.css",
-            "/css/admin/crear-act-proyecto.css"
+            "/css/admin/crear-elementos.css"
         ],
         jsFiles: [
-            "/js/admin/elementos.js",
-            "/js/admin/crear-ficha.js",
-            "/js/admin/crear-competencia.js",
-            "/js/admin/crear-resultado.js",
-            "/js/admin/crear-instructor.js",
-            "/js/admin/crear-proyectos.js",
-            "/js/admin/crear-act-proyecto.js",
-            "/js/admin/header.js"
+            "/js/admin/header.js",
+            "/js/admin/crear-elementos.js"
         ]
     });
 });

@@ -25,10 +25,10 @@ create table fichas (
 (20) not null,
 	inicio_formacion date not null,
     cantidad_aprendices int not null,
-    trimestre_actual int not null,
+    trimestre_actual int default 1,
     programacion_ficha varchar
 (200),
-    competenciasProgramadas JSON,
+    competenciasProgramadas text default "",
     id_programa int
 );
 
@@ -36,7 +36,8 @@ create table proyectos (
 	id_proyecto int primary key auto_increment,
     codigo_proyecto int, 
     nombre_proyecto varchar
-(200)
+(200),
+    id_programa int
 );
 
 create table competencias
@@ -73,7 +74,7 @@ create table instructores
 (
     id_instructor int primary key not null,
     nombre_instructor varchar(200) not null,
-    programas JSON not null,
+    programas text not null,
     tipo_contrato varchar(20) not null,
     horas_programadas int not null,
     programacion_instructor varchar(200) not null
@@ -120,14 +121,12 @@ create table competencias_programa
     id_competencia int not null
 );
 
-create table proyectos_programa
-(
-    id_programa int not null,
-    id_proyecto int not null
-);
 
 alter table fichas
 	add constraint fk_programa_fichas foreign key (id_programa) references programas (id_programa);
+
+alter table proyectos
+	add constraint fk_programa_proyectos foreign key (id_programa) references programas (id_programa);
 
 alter table actividades_proyecto
 	add constraint fk_programa_actividades_proyecto foreign key (id_programa) references programas (id_programa);
@@ -135,14 +134,8 @@ alter table actividades_proyecto
 alter table competencias_programa
 	add constraint fk_programa_competencia_programa foreign key (id_programa) references programas (id_programa);
 
-alter table proyectos_programa
-	add constraint fk_programa_proyecto_programa foreign key (id_programa) references programas (id_programa);
-
 alter table competencias_programa
 	add constraint fk_competencia_competencia_programa foreign key (id_competencia) references competencias (id_competencia);
-
-alter table proyectos_programa
-	add constraint fk_proyecto_proyecto_programa foreign key (id_proyecto) references proyectos (id_proyecto);
 
 alter table resultados
 	add constraint fk_competencias_resultados foreign key (id_competencia) references competencias (id_competencia);

@@ -19,7 +19,7 @@ controller.save = (req, res) => {
 
     req.getConnection((err, conn) => {
         conn.query('INSERT INTO programas set ?', [data], (err, programas) => {
-            res.redirect('/admin/elementos');  // redirecciona a la pagina cuando el dato es guardado
+            res.redirect('/admin/crear-elementos');  // redirecciona a la pagina cuando el dato es guardado
         });
     });
 };

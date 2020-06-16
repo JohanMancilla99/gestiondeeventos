@@ -7,10 +7,27 @@
                     autocomplete="off">
             </div>
             <div class="cf-div cf-2">
-                <select class="select-deco" required>
+                <select class="select-deco" name="id_programa" required>
                     <option disabled selected>Programa</option>
-                    <option value="técnico">Técnico</option>
-                    <option value="tecnólogo">Tecnólogo</option>
+                    <!--- 
+                        Aqui se deben cargar los programas, de la siguiente forma:
+                        <option value="id">nombre</option>
+
+                        Ya esta listo en js para que guarde el id del programa
+                        correspondiente.
+
+                        No se pueden crear fichas, sin un programa que exista
+                        en la base de datos, por eso, se deben cargar los programas
+                        creados aqui. Para poder crear la ficha correctamente.
+
+                        supongo que para cargarlos, nesecita un boton o algo, si quiere
+                        se puede hacer en js, en el archivo "crear-elementos.js". Ese archvo
+                        esta separado por secciones. En la seccion de ficha, le pone un event Listener
+                        para que cuando se oprima el boton de ficha, la izquierda, se llene todo. O no se 
+                        como mas se puede hacer.
+                    -->
+                    <option value="1">Nombre Programa 1</option>
+                    <option value="2">Nombre Programa 2</option>
                 </select>
             </div>
             <div class="cf-div cf-3">
@@ -31,17 +48,3 @@
         </form>
     </section>
 </section>
-
-
-
-{{!--  <select class="select-deco" name="nombre_programa" required>
-                <option disabled selected>Programa</option>
-                    <option value="Desarrollo y Adaptación de Prótesis y Órtesis">Desarrollo y Adaptación de Prótesis y Órtesis</option>
-                    <option value="Aseguramiento Metrológico Industrial">Aseguramiento Metrológico Industrial</option>
-                    <option value="Diseño de Productos Industriales">Diseño de Productos Industriales</option>
-                    <option value="Diseño de Sistemas Mecánicos">Diseño de Sistemas Mecánicos</option>
-                    <option value="Diseño de Moldes para la Transformación de Productos Plásticos">Diseño de Moldes para la Transformación de Productos Plásticos</option>
-                    <option value="Diseño de Troqueles">Diseño de Troqueles</option>
-                    <option value="Diseño de Integración de Automatismos Mecatrónicos">Diseño de Integración de Automatismos Mecatrónicos</option>
-                    <option value="Análisis y Desarrollo de Sistemas de Información">Análisis y Desarrollo de Sistemas de Información</option>
-                </select> --}}

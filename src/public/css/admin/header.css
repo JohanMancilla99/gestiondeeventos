@@ -2,29 +2,42 @@
 .h-admin {
     width: 100%;
     min-height: 8vh;
-    background: rgb(154, 205, 50);
+    background: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 40px;
 }
+.logo {
+    min-height: 8vh;
+    width: 30px;
+}
+.logo img {
+    height: 60px;
+    object-fit: contain;
+}
+
 .links {
-    width: 80%;
+    width: 60%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 .links a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 12px;
     height: 100%;
-    position: relative;
+    transition: all 0.4s;
 }
 .links a:hover {
-    color: rgb(229, 243, 202);
+    color: rgb(47, 179, 179);
 }
 .header-burger {
     display: none;
+}
+.header-burger div:hover {
+    background: rgb(48, 173, 157);
 }
 
 @media screen and (max-width: 766px) {
@@ -34,15 +47,19 @@
     .links {
         position: absolute;
         top: 8vh;
-        left: 0px;
+        right: 0px;
         height: 92vh;
-        z-index: 2;
-        flex-direction: column;
-        width: 60%;
-        background-color: rgb(154, 205, 50);
-        transform: translateX(-100%);
+        z-index: 100;
+        width: 100vw;
+        background-color: rgba(255, 255, 255, 0.945);
+        transform: translateX(100%);
         padding: 30px 0px;
-        transition: all 0.4s ease;
+        transition: all 0.4s;
+
+        display: grid;
+        grid-gap: 20px;
+        justify-items: center;
+        align-items: center;
     }
     .links a {
         font-size: 18px;
@@ -50,16 +67,23 @@
     .header-burger {
         display: block;
         cursor: pointer;
+        position: relative;
+        z-index: 99;
     }
     .header-burger div {
-        width: 26px;
-        height: 4px;
         margin-bottom: 4px;
-        background: white;
+        background: rgb(25, 92, 83);
+        height: 4px;
+        transition: all 0.2s;
     }
-    .h-admin {
-        justify-content: flex-start;
-        padding: 0px 20px;
+    .header-burger div:nth-child(1) {
+        width: 26px;
+    }
+    .header-burger div:nth-child(2) {
+        width: 18px;
+    }
+    .header-burger div:nth-child(3) {
+        width: 12px;
     }
 }
 

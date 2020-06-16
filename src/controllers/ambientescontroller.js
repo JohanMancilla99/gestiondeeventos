@@ -1,10 +1,18 @@
 const controller = {};
 
+const programacionDefault = () => {
+    let toReturn = "";
+    for (let j = 0; j < 96; j++) {
+        toReturn += "0";
+    }
+    return toReturn
+}
+
 controller.list = (req, res) => {
-    
+
     req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM ambientes', (err, ambientes) =>{
-            if(err){
+        conn.query('SELECT * FROM ambientes', (err, ambientes) => {
+            if (err) {
                 res.json(err);
             }
             res.render('ambientes', {
@@ -15,47 +23,48 @@ controller.list = (req, res) => {
 };
 
 // Controlador que guarda los datos 
-controller.save =(req, res) =>{
+controller.save = (req, res) => {
     const data = req.body;
+    data.programacion_ambiente = programacionDefault();
 
-   req.getConnection((err, conn) =>{
-       conn.query('INSERT INTO ambientes set ?', [data], (err, ambientes)=>{
-           res.redirect('/admin/elementos');  // redirecciona a la pagina cuando el dato es guardado
-       });
-   });
+    req.getConnection((err, conn) => {
+        conn.query('INSERT INTO ambientes set ?', [data], (err, ambientes) => {
+            res.redirect('/admin/crear-elementos');  // redirecciona a la pagina cuando el dato es guardado
+        });
+    });
 };
 
 
 // Controlador para editar
-controller.edit = (req, res) =>{
-    const {id} = req.params;
-    req.getConnection((err, conn)=>{
-    conn.query('SELECT * FROM ambientes WHERE id = ?', [id], (err, ambientes)=>{
-        res.render('edit', {
-            data: ambientes[0]
+controller.edit = (req, res) => {
+    const { id } = req.params;
+    req.getConnection((err, conn) => {
+        conn.query('SELECT * FROM ambientes WHERE id = ?', [id], (err, ambientes) => {
+            res.render('edit', {
+                data: ambientes[0]
+            })
         })
-    })
     });
 };
 
 // Guarda dato modificado
-controller.update = (req, res) =>{
-    const {id} = req.params;
+controller.update = (req, res) => {
+    const { id } = req.params;
     const necAmbientes = req.body;
-    req.getConnection((err, conn) =>{
-        conn.query('UPDATE ambientes set ? WHERE id = ?', [necAmbientes, id], (err, rows) =>{
+    req.getConnection((err, conn) => {
+        conn.query('UPDATE ambientes set ? WHERE id = ?', [necAmbientes, id], (err, rows) => {
             res.redirect('/');
         })
     })
 }
 
 // Controlador que elimina los datos
-controller.delete =(req, res) =>{
-    const {id} = req.params;
+controller.delete = (req, res) => {
+    const { id } = req.params;
 
     req.getConnection((err, conn) => {
-        conn.query('DELETE FROM ambientes WHERE id = ?', [id], (err, rows) =>{
-        res.redirect('/');  // redirecciona a la pagina cuando el dato es guardado   
+        conn.query('DELETE FROM ambientes WHERE id = ?', [id], (err, rows) => {
+            res.redirect('/');  // redirecciona a la pagina cuando el dato es guardado   
         });
     });
 };

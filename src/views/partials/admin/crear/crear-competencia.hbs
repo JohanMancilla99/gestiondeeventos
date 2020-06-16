@@ -3,8 +3,8 @@
         <h1>Crear Competencia</h1>
         <form action="/competencias" method="POST" class="cc-form">
             <div class="cc-div cc-1">
-                <input type="text" name="id_competencia" required class="input-deco" placeholder="id_competencia"
-                    autocomplete="off">
+                <input type="number" name="id_competencia" required class="input-deco" placeholder="id_competencia"
+                    min="1" autocomplete="off">
             </div>
             <div class="cc-div cc-2">
                 <textarea class="textarea-deco" name="nombre_competencia" cols="30" rows="10"
@@ -18,7 +18,7 @@
                     <option value="maquinitas">Maquinitas</option>
                 </select>
             </div>
-            <div class="cc-div cc-4">
+            <div class="cc-div cc-4 table-container">
                 <table class="table-deco">
                     <tr class="cc-main-tr">
                         <td>id</td>
@@ -34,13 +34,6 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Analisis y desarrollo de sistemas de informacion</td>
-                        <td>
-                            <div class="cc-seleccionar-programa"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
                         <td>Analisis y desarrollo de sistemas de informacion</td>
                         <td>
                             <div class="cc-seleccionar-programa"></div>
