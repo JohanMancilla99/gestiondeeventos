@@ -1,12 +1,12 @@
 <section class="caa partial">
     <section class="caa-container">
         <h1>Crea Actividad de Proyecto</h1>
-        <form class="caa-form">
+        <form action="/actAprend" method="POST" class="caa-form">
             <div class="caa-div caa-1">
-                <input type="text" class="input-deco" required placeholder="codigo actividad" autocomplete="off">
+                <input type="text" name="codigo_actividad" class="input-deco" required placeholder="codigo actividad" autocomplete="off">
             </div>
             <div class="caa-div caa-2">
-                <textarea class="textarea-deco" cols="30" rows="10" placeholder="nombre actividad"></textarea>
+                <textarea class="textarea-deco" name="nombre_actividad" cols="30" rows="10" placeholder="nombre actividad"></textarea>
             </div>
             <div class="caa-div caa-3">
                 <select class="select-deco" required>
