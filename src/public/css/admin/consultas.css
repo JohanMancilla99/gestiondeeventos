@@ -5,6 +5,7 @@
     grid-template-areas:    
         "entrada entrada"
         "imagen opciones"
+        
     ;
 }
 .consultas-entrada {
